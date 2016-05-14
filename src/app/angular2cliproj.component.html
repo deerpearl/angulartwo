@@ -1,10 +1,19 @@
 <h1>
   {{title}}
 </h1>
+<!--
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
 </ul>
-<app-home-component></app-home-component>
+-->
+<!--
+<app-main-container></app-main-container>
+-->
+<nav>
+  <a [routerLink]="['main_container']">Home</a>
+  <a [routerLink]="['news_container']">News</a>
+</nav>
+<router-outlet></router-outlet>

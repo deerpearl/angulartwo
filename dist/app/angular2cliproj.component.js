@@ -9,7 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var home_component_component_1 = require('./home-component/home-component.component');
+//import { Component } from 'angular2/core';
+var main_container_1 = require('./main-container');
+var router_1 = require('@angular/router');
+var news_container_1 = require('./news-container');
+//import { HomeComponent } from './+home';
+//import { HomeComponentComponent } from './home-component/home-component.component';
 var Angular2cliprojAppComponent = (function () {
     function Angular2cliprojAppComponent() {
         this.title = 'Welcome to Zookeeper!';
@@ -20,8 +25,14 @@ var Angular2cliprojAppComponent = (function () {
             selector: 'angular2cliproj-app',
             templateUrl: 'angular2cliproj.component.html',
             styleUrls: ['angular2cliproj.component.css'],
-            directives: [home_component_component_1.HomeComponentComponent]
-        }), 
+            //directives: [HomeComponentComponent],
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [router_1.ROUTER_PROVIDERS]
+        }),
+        router_1.Routes([
+            { path: '/main_container', component: main_container_1.MainContainerComponent },
+            { path: '/news_container', component: news_container_1.NewsContainerComponent }
+        ]), 
         __metadata('design:paramtypes', [])
     ], Angular2cliprojAppComponent);
     return Angular2cliprojAppComponent;
