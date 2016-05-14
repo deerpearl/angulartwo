@@ -9,22 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var home_component_component_1 = require('./home-component/home-component.component');
-var Angular2cliprojAppComponent = (function () {
-    function Angular2cliprojAppComponent() {
-        this.title = 'Welcome to Zookeeper!';
+var HomeComponentComponent = (function () {
+    function HomeComponentComponent() {
     }
-    Angular2cliprojAppComponent = __decorate([
+    HomeComponentComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponentComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'angular2cliproj-app',
-            templateUrl: 'angular2cliproj.component.html',
-            styleUrls: ['angular2cliproj.component.css'],
-            directives: [home_component_component_1.HomeComponentComponent]
+            selector: 'app-home-component',
+            templateUrl: 'home-component.component.html',
+            styleUrls: ['home-component.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], Angular2cliprojAppComponent);
-    return Angular2cliprojAppComponent;
+    ], HomeComponentComponent);
+    return HomeComponentComponent;
 }());
-exports.Angular2cliprojAppComponent = Angular2cliprojAppComponent;
-//# sourceMappingURL=angular2cliproj.component.js.map
+exports.HomeComponentComponent = HomeComponentComponent;
+//# sourceMappingURL=home-component.component.js.map
