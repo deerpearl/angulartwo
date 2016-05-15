@@ -1,19 +1,16 @@
-<h1>
-  {{title}}
-</h1>
-<!--
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
--->
-<!--
-<app-main-container></app-main-container>
--->
+<nav class="navbar navbar-default headerColor">
+  			<div class="container-fluid">
+    			<div class="navbar-header col-md-5">     
+      				<label class="navbar-brand">{{title}}</label>
+    			</div>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav navbar-right">
+  						<li role="presentation"><a [routerLink]="['main_container']">Home</a></li>
+  						<li role="presentation"> <a [routerLink]="['news_container']">News</a></li>
+  					
+					</ul>
+    			</div>
+  			</div>
+		</nav>
+        <router-outlet></router-outlet>
 <nav>
-  <a [routerLink]="['main_container']">Home</a>
-  <a [routerLink]="['news_container']">News</a>
-</nav>
-<router-outlet></router-outlet>
