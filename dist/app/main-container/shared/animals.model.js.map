@@ -1,0 +1,1 @@
+{"version":3,"file":"animals.model.js","sourceRoot":"","sources":["animals.model.ts"],"names":[],"mappings":";AAAA;IAAA;IAIA,CAAC;IAAD,cAAC;AAAD,CAAC,AAJD,IAIC;AAJY,eAAO,UAInB,CAAA","sourcesContent":["export class Animals {\n    imgurl: string;\n    name: string;\n    description: string;\n}"]}
