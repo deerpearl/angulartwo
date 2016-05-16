@@ -9,20 +9,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var animals_service_1 = require('./shared/animals.service');
+var http_1 = require('@angular/http');
 //import { Component, OnInit } from 'angular2/core';
 var MainContainerComponent = (function () {
-    function MainContainerComponent() {
+    function MainContainerComponent(anmlsrvc) {
+        this.anmlsrvc = anmlsrvc;
     }
+    /* To be deleted later:
+    search (term) {
+      this.anmlsrvc.search(term)
+                           .then(items => this.items = items);
+    }
+    */
     MainContainerComponent.prototype.ngOnInit = function () {
+        this.getAnimals();
+    };
+    MainContainerComponent.prototype.getAnimals = function () {
+        var _this = this;
+        this.anmlsrvc.getAnimals()
+            .subscribe(function (animals) { return _this.animals = animals; }, function (error) { return _this.errorMessage = error; });
+    };
+    MainContainerComponent.prototype.addAnimal = function (name) {
+        var _this = this;
+        if (!name) {
+            return;
+        }
+        this.anmlsrvc.addAnimal(name)
+            .subscribe(function (animal) { return _this.animals.push(animal); }, function (error) { return _this.errorMessage = error; });
     };
     MainContainerComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-main-container',
             templateUrl: 'main-container.component.html',
-            styleUrls: ['main-container.component.css']
+            styleUrls: ['main-container.component.css'],
+            providers: [animals_service_1.AnimalsService, http_1.HTTP_PROVIDERS]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [animals_service_1.AnimalsService])
     ], MainContainerComponent);
     return MainContainerComponent;
 }());

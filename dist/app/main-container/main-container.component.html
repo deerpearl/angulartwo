@@ -1,3 +1,12 @@
-<p>
-  main-container works!
-</p>
+<h3>Animals:</h3>
+<ul>
+  <li *ngFor="let animal of animals">
+    {{animal.name}}
+  </li>
+</ul>
+New Animal:
+<input #newAnimalName />
+<button (click)="addAnimal(newAnimalName.value); newAnimalName.value=''">
+Add Animal
+</button>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
