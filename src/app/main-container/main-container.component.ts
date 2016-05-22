@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AnimalsService } from './shared/animals.service'
 import { HTTP_PROVIDERS} from '@angular/http'
 import { Animals } from './shared/animals.model';
-import { Boxlabel} from './shared/label.component';
-import { Boxbutton} from './shared/button.component';
+import { Boxlabel } from './shared/label.component';
+import { Boxbutton } from './shared/button.component';
+import { Boxtextfield } from './shared/textfield.component';
 //import { Component, OnInit } from 'angular2/core';
 
 @Component({
@@ -12,7 +13,7 @@ import { Boxbutton} from './shared/button.component';
   templateUrl: 'main-container.component.html',
   styleUrls: ['main-container.component.css'],
   providers: [AnimalsService, HTTP_PROVIDERS],
-  directives: [Boxlabel, Boxbutton]
+  directives: [Boxlabel, Boxbutton, Boxtextfield]
 })
 export class MainContainerComponent implements OnInit {
 

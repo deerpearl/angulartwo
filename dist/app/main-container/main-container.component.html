@@ -14,4 +14,9 @@ New Animal:
 <button (click)="addAnimal(newAnimalName.value); newAnimalName.value=''">
 Add Animal
 </button>
+<box-text-field
+  placeholder="Please type in your search words"
+  [(value)] = "displayValue"> 
+</box-text-field>
+<p>Input Value: {{displayValue}}</p>
 <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
