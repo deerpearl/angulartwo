@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var animals_service_1 = require('./shared/animals.service');
 var http_1 = require('@angular/http');
 var label_component_1 = require('./shared/label.component');
+var button_component_1 = require('./shared/button.component');
 //import { Component, OnInit } from 'angular2/core';
 var MainContainerComponent = (function () {
     function MainContainerComponent(anmlsrvc) {
@@ -25,6 +26,9 @@ var MainContainerComponent = (function () {
     */
     MainContainerComponent.prototype.ngOnInit = function () {
         this.getAnimals();
+    };
+    MainContainerComponent.prototype.handleClick = function () {
+        alert('this button is clicked');
     };
     MainContainerComponent.prototype.getAnimals = function () {
         var _this = this;
@@ -46,7 +50,7 @@ var MainContainerComponent = (function () {
             templateUrl: 'main-container.component.html',
             styleUrls: ['main-container.component.css'],
             providers: [animals_service_1.AnimalsService, http_1.HTTP_PROVIDERS],
-            directives: [label_component_1.Boxlabel]
+            directives: [label_component_1.Boxlabel, button_component_1.Boxbutton]
         }), 
         __metadata('design:paramtypes', [animals_service_1.AnimalsService])
     ], MainContainerComponent);

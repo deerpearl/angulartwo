@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AnimalsService } from './shared/animals.service'
 import { HTTP_PROVIDERS} from '@angular/http'
 import { Animals } from './shared/animals.model';
-import { Boxlabel} from './shared/label.component'
+import { Boxlabel} from './shared/label.component';
+import { Boxbutton} from './shared/button.component';
 //import { Component, OnInit } from 'angular2/core';
 
 @Component({
@@ -11,7 +12,7 @@ import { Boxlabel} from './shared/label.component'
   templateUrl: 'main-container.component.html',
   styleUrls: ['main-container.component.css'],
   providers: [AnimalsService, HTTP_PROVIDERS],
-  directives: [Boxlabel]
+  directives: [Boxlabel, Boxbutton]
 })
 export class MainContainerComponent implements OnInit {
 
@@ -28,6 +29,10 @@ export class MainContainerComponent implements OnInit {
   */
   ngOnInit() {
     this.getAnimals();
+  }
+  
+  handleClick() {
+    alert('this button is clicked');
   }
   
   getAnimals(){

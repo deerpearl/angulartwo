@@ -1,7 +1,12 @@
 <h3>Animals:</h3>
 <ul>
   <li *ngFor="let animal of animals">
+    <!--
     <box-label name='{{animal.name}}'></box-label>
+    -->
+    <box-button name='{{animal.name}}' 
+      isPrimary='True'
+      (click) = "handleClick()"></box-button>
   </li>
 </ul>
 New Animal:
