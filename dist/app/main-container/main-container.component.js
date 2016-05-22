@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var animals_service_1 = require('./shared/animals.service');
 var http_1 = require('@angular/http');
+var label_component_1 = require('./shared/label.component');
 //import { Component, OnInit } from 'angular2/core';
 var MainContainerComponent = (function () {
     function MainContainerComponent(anmlsrvc) {
@@ -44,7 +45,8 @@ var MainContainerComponent = (function () {
             selector: 'app-main-container',
             templateUrl: 'main-container.component.html',
             styleUrls: ['main-container.component.css'],
-            providers: [animals_service_1.AnimalsService, http_1.HTTP_PROVIDERS]
+            providers: [animals_service_1.AnimalsService, http_1.HTTP_PROVIDERS],
+            directives: [label_component_1.Boxlabel]
         }), 
         __metadata('design:paramtypes', [animals_service_1.AnimalsService])
     ], MainContainerComponent);
